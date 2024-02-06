@@ -1,0 +1,66 @@
+﻿@charset "utf-8";
+
+/*
+   New Perspectives on HTML5 and CSS3, 8th Edition
+   Tutorial 3
+   Coding Challenge 1
+
+   Author:  Jared Bears
+   Date:    02/05/2024
+   
+   Filename: code3-1_float.css
+
+   Task 1: Open the files code3-1.html and _code3-1_float.css _ 
+   and in the comment section enter your name (First + Last) and 
+   the date (MM/DD/YYYY) into the Author: and Date: fields of the file.
+
+
+   Task 2: Go to the code3-1.html file in your editor. Within the head 
+   section insert a link element linking the page to the code3-1_float.css 
+   style sheet file. Take some time to study the content of the page.
+
+
+   To create a drop cap insert a style rule for the selector p:first-of-type::first-letter 
+   and add the following styles:
+
+   Float the element on the left margin.
+   Set the font size to 4em and the line height to 0.8em.
+   Set the size of the right margin and padding space to 0.1em. Set the bottom padding to 0.2em.
+   Display the first line of the speech in small caps by adding a style rule for the 
+   selector p:first-of-type::first-line that changes the font variant to small-caps and 
+   the font size to 1.4em.
+
+
+   Task 3: Create a drop cap insert a style rule for the selector p:first-of-type::first-letter
+
+
+   Task 4: Open the file code3-1_float.css, and for all img elements create a style rule to set 
+   the height of the image to 3.3em. Float all img elements on the right margin, but only when 
+   the right margin is first cleared of any floats. (Hint: clear: right).
+
+
+   Task 5: Open the page in the browser preview and verify the layout of the page resembles 
+   that shown in Figure 3-79.
+
+*/
+
+p:first-of-type::first-letter {
+   float: left;
+   font-size: 4em;
+   line-height: 0.8em;
+   margin-right: 0.1em;
+   padding-right: 0.1em;
+   padding-bottom: 0.2em;
+
+}
+
+p:first-of-type::first-line {
+   font-variant: small-caps;
+   font-size: 1.4em;
+}
+
+img {
+   height: 3.3em;
+   clear: right;
+   float: right;
+}
