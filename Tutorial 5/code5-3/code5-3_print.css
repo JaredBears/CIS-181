@@ -5,8 +5,35 @@
    Tutorial 5
    Coding Challenge 3
 
-   Author:   
-   Date:     
+   Author:   Jared Bears
+   Date:     02/28/2024
    Filename: code5-3_print.css
 
 */
+
+@media print {
+   body {
+      width: 8.5in;
+      height: 11in;
+      margin: 1in;
+   }
+
+   a {
+      text-decoration: none;
+   }
+
+   nav {
+      page-break-inside: avoid;
+   }
+
+   ol li {
+      line-height: 0.3in;
+   }
+
+   a::after {
+      content: " [" attr(href) "]";
+      display: inline-block;
+      margin-left: 20px;
+      word-wrap: break-word;
+   }
+}
