@@ -6,48 +6,74 @@
    Tutorial 7
    Coding Challenge 2
    
-   Author:  
-   Date:    
+   Author:  Jared Bears
+   Date:    03/07/2024
    Filename: code7-2.html
+
+   Task 2: Open the code7-2.html file and within the head section insert a link element linking the page to the code7-2_forms.css style sheet.
    -->
    <meta charset="utf-8">
    <title>Coding Challenge 7-2</title>
+   <link rel="stylesheet" href="code7-2_forms.css">
 </head>
 <body>
+
+   <!--
+      Task 3: Create the first survey question.
+
+      The survey questions are marked as an ordered list. The first three questions include a nested list of options. For the first question do the following:
+
+      Mark the text from Very Satisfied to Very Dissatisfied as form labels.
+      Before each label insert a radio button belonging to the q1 field with default values of a through d. Assign the radio button controls the ids q1a through q1d.
+      Use the for attribute to associate each label with its radio button control.
+   -->
+
    <h1>Survey Questions</h1>
 
+   <form action="submit-survey.php" method="post">
       <ol type="1">
          <li>
             How satisfied were you with the conference workshops?
             <ol type="a">
                <li>
-                  Very Satisfied
+                  <input type="radio" id="q1a" name="q1" value="a">
+                  <label for="q1a">Very Satisfied</label>
                </li>
                <li>
-                  Satisfied
+                  <input type="radio" id="q1b" name="q1" value="b">
+                  <label for="q1b">Satisfied</label>
                </li>
                <li>
-                  Dissatisfied
+                  <input type="radio" id="q1c" name="q1" value="c">
+                  <label for="q1c">Dissatisfied</label>
                </li>
                <li>
-                  Very Dissatisfied
+                  <input type="radio" id="q1d" name="q1" value="d">
+                  <label for="q1d">Very Dissatisfied</label>
                </li>                 
             </ol>
          </li>
+         <!-- 
+            Task 4: Repeat the previous task ("Create the first survey question") for questions 2 and 3, naming the fields for those radio buttons q2 and q3 respectively and assigning the radio button controls the ids q2a through q2d for the second question and q3a through q3d for the third question.
+         -->
          <li>
             How satisfied were you with the conference speakers?
             <ol type="a">
                <li>
-                  Very Satisfied
+                  <input type="radio" id="q2a" name="q2" value="a">
+                  <label for="q2a">Very Satisfied</label>
                </li>
                <li>
-                  Satisfied
+                  <input type="radio" id="q2b" name="q2" value="b">
+                  <label for="q2b">Satisfied</label>
                </li>
                <li>
-                  Dissatisfied
+                  <input type="radio" id="q2c" name="q2" value="c">
+                  <label for="q2c">Dissatisfied</label>
                </li>
                <li>
-                  Very Dissatisfied
+                  <input type="radio" id="q2d" name="q2" value="d">
+                  <label for="q2d">Very Dissatisfied</label>
                </li>                 
             </ol>
          </li>
@@ -55,30 +81,50 @@
             How satisfied were you with the conference facilities?
             <ol type="a">
                <li>
-                  Very Satisfied
+                  <input type="radio" id="q3a" name="q3" value="a">
+                  <label for="q3a">Very Satisfied</label>
                </li>
                <li>
-                  Satisfied
+                  <input type="radio" id="q3b" name="q3" value="b">
+                  <label for="q3b">Satisfied</label>
                </li>
                <li>
-                  Dissatisfied
+                  <input type="radio" id="q3c" name="q3" value="c">
+                  <label for="q3c">Dissatisfied</label>
                </li>
                <li>
-                  Very Dissatisfied
-               </li>               
+                  <input type="radio" id="q3d" name="q3" value="d">
+                  <label for="q3d">Very Dissatisfied</label>
+               </li>
             </ol>
          </li>
          <li>
             How likely are you to attend next year's conference?
+            <!--
+               Task 5: Within the div element with the id newRow insert a range slider that ranges from 1 to 10 in steps of 1, with a default value of 5. Insert the text very unlikely before the range slider and the text very likely after the range slider. Assign the range slider the field name q4.
+            -->
             <div id="newRow">
-               
+               <input type="range" name="q4" id="q4" min="1" max="10" value="5">
+               <span>Very Unlikely</span>
+               <span>Very Likely</span>
             </div>
-         </li> 
+         </li>
          <li>
-           Provide any suggestions for the next conference:
-         </li>         
-      </ol>
+            <!--
+               Task 6 Mark the text Provide any suggestions for the next conference as a form label and use the for attribute to attach the label to the input control with the id q5text.
 
+               Below the label, insert a textarea control with the id q5text and the field name q5. Add the placeholder text enter your suggestions here.
+            -->
+
+            <label for="q5text">Provide any suggestions for the next conference:</label>
+            <textarea id="q5text" name="q5" placeholder="Enter your suggestions here"></textarea>
+         </li>
+      </ol>
+   </form>
+
+   <!--
+      Task 7: Immediately after the h1 tag create the form by enclosing the list of questions within opening and closing <form> tags. Give the form the action submit-survey.php using the post method.
+   -->
 
 </body>
 </html>
