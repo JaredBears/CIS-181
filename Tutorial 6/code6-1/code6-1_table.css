@@ -5,9 +5,38 @@
    Tutorial 6
    Coding Challenge 1
    
-   Author:   Coding Challenge 1   
-   Date:     2021-03-01
+   Author:   Jared Bears
+   Date:     03/04/2024
    Filename: code6-1_table.css
 
 */
 
+table {
+   border: 20px groove gray;
+   border-collapse: collapse;
+}
+
+th, td {
+   border: 1px solid gray;
+   padding: 5px;
+   vertical-align: top;
+}
+
+caption {
+   font-size: 1.5em;
+   caption-side: top;
+   text-align: left;
+}
+
+col#firstCol {
+   background-color: yellow;
+   width: 150px;
+}
+
+col#hourCols {
+   width: 75px;
+}
+
+thead {
+   background-color: aqua;
+}

@@ -5,8 +5,41 @@
    Tutorial 6
    Coding Challenge 2
    
-   Author:    
-   Date:     
+   Author:    Jared Bears
+   Date:      03/06/2024
    Filename: code6-2_table.css
 
+   Open code6-2_table.css and create the following style rules for the indicated elements:
+
+   For the table element: Add a 20 pixel margin around the table and collapse the table borders.
+   For the th element nested within the table row of the table header row group: Set the font color to white, the background color to red, and the font size to 1.5em. Add a 1 pixel solid gray border around the element.
+   For every td element: Set the width and height to 50 pixels, the font size to 0.7em, the border to a 1 pixel solid gray, and align the text with the top-left corner of the cell.
+   For every td element of the blank class: Change the background to a linear gradient going toward the bottom-right corner of the element and transitioning from red to gray.
+
+   Task 5: Style the table and related elements.
+
 */
+
+table {
+    margin: 20px;
+    border-collapse: collapse;
+}
+
+table thead tr th {
+    color: white;
+    background-color: red;
+    font-size: 1.5em;
+    border: 1px solid gray;
+}
+
+td {
+    width: 50px;
+    height: 50px;
+    font-size: 0.7em;
+    border: 1px solid gray;
+    vertical-align: top;
+}
+
+td.blank {
+    background: linear-gradient(to bottom right, red, gray);
+}

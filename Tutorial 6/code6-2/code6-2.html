@@ -6,15 +6,131 @@
    Tutorial 6
    Coding Challenge 2
    
-   Author:   
-   Date:     
+   Author:   Jared Bears
+   Date:     03/07/2024
    Filename: code6-2.html
+
+   Task 2: Go to the code6-2.html file and within the head section insert link elements linking the page to the code6-2_layout.css and code6-2_table.css files.
+
    -->
    <meta charset="utf-8">
    <title>Coding Challenge 6-2</title>
-   
+   <link href="code6-2_layout.css" rel="stylesheet">
+   <link href="code6-2_table.css" rel="stylesheet">
 </head>
 <body>
- 
+   <!--
+      Task 3: Within the page body insert a table element and add a table header row group containing one row. Within that row insert a table heading cell that spans 8 columns and contains the text Daily Crossword.
+
+      Add the table body section and within the table body, create the layout of the crossword puzzle subject to the following conditions:
+
+      The table will contain 9 rows and 8 columns.
+      Within each row will be a number of table data cells. If the cell is a blank cell shown in Figure 6–49, assign it the class name blank. If a blank cell covers multiple rows and/or columns, make that cell a spanning cell and adjust the number of cells in subsequent rows and columns accordingly to preserve the table layout.
+      Several cells contain numbers that will be used as crossword puzzle clues. Number the appropriate cells from 1 up to 26 to match the layout in Figure 6–49.
+
+      Task 4: Create the table body.
+
+         Figure 6–49: The layout of the crossword puzzle
+         _ = empty cell
+         b = blank cell
+
+         1 2 3 _ b b 4 _
+         5 _ _ b 6 7 _ b
+         8 _ _ b 9 _ _ 10
+         b b _ b 11 _ _ _
+         12 13 _ 14 b b b b
+         15 _ b 16 17 18 19 20
+         21 _ b 22 _ _ _ _
+         23 _ b 24 _ _ b b
+         25 _ _ b 26 _ b b
+   -->
+
+   <table>
+      <thead>
+         <tr>
+            <th colspan="8">Daily Crossword</th>
+         </tr>
+      </thead>
+      <tbody>
+         <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td></td>
+            <td class="blank" colspan="2"></td>
+            <td>4</td>
+            <td></td>
+         </tr>
+         <tr>
+            <td>5</td>
+            <td></td>
+            <td></td>
+            <td class="blank" rowspan="3"></td>
+            <td>6</td>
+            <td>7</td>
+            <td></td>
+            <td class="blank"></td>
+         </tr>
+         <tr>
+            <td>8</td>
+            <td></td>
+            <td></td>
+            <td>9</td>
+            <td></td>
+            <td></td>
+            <td>10</td>
+         </tr>
+         <tr>
+            <td class="blank" colspan="2"></td>
+            <td></td>
+            <td>11</td>
+            <td></td>
+            <td></td>
+            <td></td>
+         </tr>
+         <tr>
+            <td>12</td>
+            <td>13</td>
+            <td></td>
+            <td>14</td>
+            <td class="blank" colspan="4"></td>
+         </tr>
+         <tr>
+            <td>15</td>
+            <td></td>
+            <td class="blank" rowspan="3"></td>
+            <td>16</td>
+            <td>17</td>
+            <td>18</td>
+            <td>19</td>
+            <td>20</td>
+         </tr>
+         <tr>
+            <td>21</td>
+            <td></td>
+            <td>22</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+         </tr>
+         <tr>
+            <td>23</td>
+            <td></td>
+            <td>24</td>
+            <td></td>
+            <td></td>
+            <td class="blank" colspan="2" rowspan="2"></td>
+         </tr>
+         <tr>
+            <td>25</td>
+            <td></td>
+            <td></td>
+            <td class="blank"></td>
+            <td>26</td>
+            <td></td>
+         </tr>
+      </tbody>
+   </table>
 </body>
 </html>
