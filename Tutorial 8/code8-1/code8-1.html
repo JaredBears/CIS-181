@@ -6,14 +6,16 @@
    Tutorial 8
    Coding Challenge 1
    
-   Author:   
-   Date:     
+   Author:   Jared Bears
+   Date:     03/08/2024
    Filename: code8-1.html
+
+   Task 2: Go to the code8-1.html file and within the head section insert a link element linking the page to the code8-1_video.css style sheet file.
    -->
    <meta charset="utf-8">
    <title>Coding Challenge 8-1</title>
    <link href="code8-1_styles.css" rel="stylesheet" />
-
+   <link href="code8-1_video.css" rel="stylesheet" />
 </head>
 <body>
    <h1>Learning the High Ollie</h1>
@@ -44,6 +46,22 @@
       <li><strong>Be smooth</strong> Your motions should be fluid and smooth with no jagged or
          awkward movements that will kill your momentum. Timing is everything.</li>
    </ol>
+   <!-- 
+      Task 3: Add the video element.
+
+      Below the ordered list insert a video element with the following features:
+
+      Add the controls attribute to the video element to show player controls.
+      Add the source files ollie.mp4 and ollie.webm to the video element. Include the mime-type for both video files.
+      If a browser doesn’t support HTML video, display a paragraph containing the text Upgrade your browser to view embedded videos.
+      Add a track using the contents of the captions8-1.vtt file. Set the value of the kind attribute to captions and add the label Video Captions.
+   -->
+   <video controls>
+      <source src="ollie.mp4" type="video/mp4" />
+      <source src="ollie.webm" type="video/webm" />
+      <p>Upgrade your browser to view embedded videos.</p>
+      <track src="captions8-1.vtt" kind="captions" label="Video Captions" />
+   </video>
 
    <p>Keep practicing and as you become more comfortable with the High Ollie, you will find yourself
       getting more and more air!</p>

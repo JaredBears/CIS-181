@@ -1,0 +1,134 @@
+﻿@charset "utf-8";
+
+/*
+   New Perspectives on HTML5 and CSS3, 8th Edition
+   Tutorial 8
+   Coding Challenge 3
+
+   Author:   Jared Bears
+   Date:     03/08/2024
+   Filename: code8-3_anim.css
+
+*/
+
+div#cube {
+	position: absolute;
+	top: 300px;
+	left: 350px;
+	width: 300px;
+	height: 300px;
+	perspective: 2000px;
+	transform: rotateX(24deg) rotateY(40deg);  
+	transform-style: preserve-3d;   
+}
+
+div#cube img {
+   display: block;
+   width: 300px;
+   height: 300px;
+   position: absolute;
+   top: 0px;
+   left: 0px;
+} 
+
+
+
+@keyframes moveFront {
+	0% {transform: translate3d(0px, 0px, 0px);}
+	100% {transform: translate3d(0px, 0px, 150px);}		
+}
+
+@keyframes moveBack {
+	0% {transform: rotateY(0deg) translate3d(0px, 0px, 0px)}
+	100% {transform: rotateY(180deg) translate3d(0px, 0px, 150px);}		
+}
+
+@keyframes moveBottom {
+	0% {transform: rotateX(0deg) translate3d(0px, 0px, 0px);}
+	100% {transform: rotateX(-90deg) translate3d(0px, 0px, 150px);}		
+}
+
+@keyframes moveLeft {
+	0% {transform: rotateY(0deg) translate3d(0px, 0px, 0px);	}
+	100% {transform: rotateY(-90deg) translate3d(0px, 0px, 150px);}		
+}
+
+@keyframes moveRight {
+	0% {transform: rotateY(0deg) translate3d(0px, 0px, 0px);}
+	100% {transform: rotateY(90deg) translate3d(0px, 0px, 150px);}		
+}
+
+@keyframes moveTop {
+	0% {transform: rotateX(0deg) translate3d(0px, 0px, 0px);}	
+	100% {transform: rotateX(90deg) translate3d(0px, 0px, 150px);}		
+}
+
+
+/*
+Task 3: Add the keyframe animations.
+Open the code8-3_anim.css file. Several keyframe animations have already been created for you. Add a keyframe animation named spinCube that contains the following frames:
+
+At 0% apply the transform property with the rotateX() function set to 24deg and the rotateY() function set to 40deg.
+At 50% change the value of the rotateX() function to 204deg and the rotateY() function to 220deg
+At 100%, change the value of the rotateX() function to 384 and the rotateY() function to 400deg.
+*/
+
+@keyframes spinCube {
+	0% {transform: rotateX(24deg) rotateY(40deg);}
+	50% {transform: rotateX(204deg) rotateY(220deg);}
+	100% {transform: rotateX(384deg) rotateY(400deg);}
+}
+
+/*
+Task 4: When the page is initially opened you want it to display animation of the six faces of the cube being assembled. Create a style rule that applies the moveFront keyframe animation to the #faceFront object. Set the duration of the animation to 3 seconds and set the animation- fill-mode property to forwards.
+*/
+
+#faceFront {
+	animation-name: moveFront;
+	animation-duration: 3s;
+	animation-fill-mode: forwards;
+}
+
+/*
+Task 5: Repeat the previous step for the #faceBack, #faceBottom, #faceLeft, #faceTop, and #faceRight objects using the moveBack, moveBottom, moveLeft, moveTop, and moveRight animations.
+*/
+
+#faceBack {
+	animation-name: moveBack;
+	animation-duration: 3s;
+	animation-fill-mode: forwards;
+}
+
+#faceBottom {
+	animation-name: moveBottom;
+	animation-duration: 3s;
+	animation-fill-mode: forwards;
+}
+
+#faceLeft {
+	animation-name: moveLeft;
+	animation-duration: 3s;
+	animation-fill-mode: forwards;
+}
+
+#faceRight {
+	animation-name: moveRight;
+	animation-duration: 3s;
+	animation-fill-mode: forwards;
+}
+
+/*
+Task 6: After the cube is assembled you want it to rotate. Create a style rule that applies the spinCube animation to the #cube object, running the animation over a 3 second duration after a delay of 3 seconds. Use the linear timing function and have the animation loop without ending.
+*/
+
+#cube {
+	animation-name: spinCube;
+	animation-duration: 3s;
+	animation-delay: 3s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+/*
+Open the website in the browser preview. Verify that in the first 3 seconds the cube is assembled by moving the six faces into position and that after 3 seconds, the cube begins spinning to show all the faces of the cube.
+*/

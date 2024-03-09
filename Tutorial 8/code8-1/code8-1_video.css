@@ -5,9 +5,21 @@
    Tutorial 8
    Coding Challenge 1
 
-   Author:   
-   Date:     
+   Author:   Jared Bears
+   Date:     03/08/2024
    Filename: code8-1_video.css
 
+   Task 4: Go to the code8-1_video.css file and add a style rule for the video element that:
+
+   Displays the video player as a block element,
+   Sets the width of the player to 75%, and
+   Sets the top/bottom margin to 10 pixels and the left/right margins to auto.
+
 */
+
+video {
+    display: block;
+    width: 75%;
+    margin: 10px auto;
+}
 

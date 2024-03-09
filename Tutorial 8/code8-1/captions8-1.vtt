@@ -1,0 +1,14 @@
+WEBVTT
+
+NOTE
+   New Perspectives on HTML5 and CSS3, 8th Edition
+   Tutorial 8
+   Coding Challenge 1
+   Author:   Jared Bears
+   Date:     03/08/2024
+   Filename: captions8-1.vtt
+Task 5: Open the captions8-1.vtt file in your editor and create a cue with the label Caption going from 3 to 6 seconds of the video and displaying the text A High Ollie during that interval. Link the captions8-1.vtt file to the video using the track element.
+
+1
+00:03.000 --> 00:06.000
+A High Ollie
